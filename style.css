@@ -58,41 +58,40 @@ input:focus {
 }
 
 .slider {
-  -webkit-appearance: none;  /* Override default CSS styles */
+  -webkit-appearance: none;
   appearance: none;
-  width: 50%; /* Full-width */
-  height: 1px; /* Specified height */
-  outline: none; /* Remove outline */
-  opacity: 0.5; /* Set transparency (for mouse-over effects on hover) */
-  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  width: 50%; 
+  height: 1px; 
+  outline: none; 
+  opacity: 0.5; 
+  -webkit-transition: .2s; 
   transition: opacity .2s;
   margin: 35px 0;
   border-radius: 5px;
 }
 
 .slider::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Override default look */
+  -webkit-appearance: none;
   appearance: none;
-  width: 10px; /* Set a specific slider handle width */
-  height: 10px; /* Slider handle height */
-  background: var(--main-color); /* Green background */
-  cursor: pointer; /* Cursor on hover */
+  width: 10px;
+  height: 10px;
+  background: var(--main-color); 
+  cursor: pointer;
   border-radius: 50%; 
   text-align: center;
 }
 
 .slider::-moz-range-thumb {
-  width: 5px; /* Set a specific slider handle width */
-  height: 5px; /* Slider handle height */
-  background:  var(--main-color); /* Green background */
-  cursor: pointer; /* Cursor on hover */
+  width: 5px;
+  height: 5px;
+  background:  var(--main-color);
+  cursor: pointer;
   border-radius: 50%; 
   text-align: center;
 }
 
-/* Mouse-over effects */
 .slider:hover {
-  opacity: 0.7; /* Fully shown on mouse-over */
+  opacity: 0.7; 
 }
 
 footer{

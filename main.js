@@ -5,7 +5,7 @@ const ctx = /** @type {CanvasRenderingContext2D} */canvas.getContext('2d');
 canvas.width = 800;
 canvas.height = 600;
 
-ctx.strokeStyle = '#666666'
+ctx.strokeStyle = '#666666';
 ctx.lineWidth = 2;
 
 // DOM VARIABLES
@@ -21,7 +21,7 @@ const drawGround = function () {
   ctx.moveTo(0, 599)
   ctx.lineTo(800, 599);
   ctx.stroke();
-}
+};
 
 const draw = function (percentSlope) {
   const length = 800; 
@@ -32,7 +32,7 @@ const draw = function (percentSlope) {
   ctx.moveTo(0, 599);
   ctx.lineTo(deltaX, 599 - deltaY);
   ctx.stroke();
-}
+};
 
 // CALCULATION FUNCTIONS
 
@@ -66,7 +66,7 @@ const updateFromSlider = function (percent) {
   input1Percent.value = percent;
   input2Degree.value = (Math.atan(percent / 100) * 180 / Math.PI).toFixed(2);
   input3Ratio.value = (1 / (percent / 100)).toFixed(2);
-}
+};
 
 // INIT
 const init = function () {
@@ -74,12 +74,12 @@ const init = function () {
   input2Degree.value = '';
   input1Percent.value = '';
   input3Ratio.value = '';
-}
+};
 
 const clearSlopeLine = function () {
-  ctx.clearRect(0, 0, canvas.width, canvas.height)
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   drawGround();
-}
+};
 
 // INPUT EVENT LISTENERS
 input1Percent.addEventListener('keyup', () => {
@@ -95,7 +95,7 @@ input1Percent.addEventListener('keyup', () => {
   else {
     init();
   }
-})
+});
 
 input2Degree.addEventListener('keyup', () => {
   const curVal = input2Degree.value;
@@ -111,7 +111,7 @@ input2Degree.addEventListener('keyup', () => {
   else {
     init();
   }
-})
+});
 
 input3Ratio.addEventListener('keyup', () => {
   const curVal = input3Ratio.value;
@@ -127,12 +127,7 @@ input3Ratio.addEventListener('keyup', () => {
   else {
     init();
   }
-})
-
-init();
-
-// reseting on click
-// inputs.forEach(input=> input.addEventListener('click', () => init()))
+});
 
 slider.addEventListener('input', () => {
   const curVal = slider.value;
@@ -148,4 +143,6 @@ slider.addEventListener('input', () => {
   else {
     init();
   }
-})
+});
+
+init();
