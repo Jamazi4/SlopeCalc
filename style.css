@@ -55,7 +55,8 @@ input:focus {
 
 #canvas {
   overflow: hidden;
-  height: 500px;
+  height: 526px;
+  width: 700px;
 }
 
 .slider {
@@ -116,6 +117,7 @@ footer {
 @media only screen and (max-width: 540px) {
   #canvas {
     width: 300px;
+    height: 225px;
   }
 
   body {
@@ -137,6 +139,6 @@ footer {
 
   .app {
     padding: 10px;
-    grid-template-rows: 30px 1fr 10px;
+    grid-template-rows: 150px 1fr 10px;
   }
 }
