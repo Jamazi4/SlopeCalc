@@ -12,7 +12,7 @@ body {
 
 .app {
   display: grid;
-  grid-template-rows: 150px 1fr 10px;
+  grid-template-rows: 100px 1fr 10px;
   justify-content: center;
   justify-items: center;
 }
@@ -55,16 +55,17 @@ input:focus {
 
 #canvas {
   overflow: hidden;
+  height: 500px;
 }
 
 .slider {
   -webkit-appearance: none;
   appearance: none;
-  width: 50%; 
-  height: 1px; 
-  outline: none; 
-  opacity: 0.5; 
-  -webkit-transition: .2s; 
+  width: 50%;
+  height: 1px;
+  outline: none;
+  opacity: 0.5;
+  -webkit-transition: .2s;
   transition: opacity .2s;
   margin: 35px 0;
   border-radius: 5px;
@@ -75,26 +76,26 @@ input:focus {
   appearance: none;
   width: 10px;
   height: 10px;
-  background: var(--main-color); 
+  background: var(--main-color);
   cursor: pointer;
-  border-radius: 50%; 
+  border-radius: 50%;
   text-align: center;
 }
 
 .slider::-moz-range-thumb {
   width: 5px;
   height: 5px;
-  background:  var(--main-color);
+  background: var(--main-color);
   cursor: pointer;
-  border-radius: 50%; 
+  border-radius: 50%;
   text-align: center;
 }
 
 .slider:hover {
-  opacity: 0.7; 
+  opacity: 0.7;
 }
 
-footer{
+footer {
   position: fixed;
   right: 40px;
   bottom: 40px;
@@ -104,9 +105,38 @@ footer{
 
 .footer-name {
   margin: 0;
-  color:rgba(202, 202, 202, 0.247)
+  color: rgba(202, 202, 202, 0.247)
 }
-.footer-mail  {
+
+.footer-mail {
   margin: 0;
-  color:rgba(202, 202, 202, 0.151)
+  color: rgba(202, 202, 202, 0.151)
+}
+
+@media only screen and (max-width: 540px) {
+  #canvas {
+    width: 300px;
+  }
+
+  body {
+    font-size: 15px;
+  }
+
+  input {
+    font-size: 15px;
+    width: 60px;
+  }
+
+  .slope {
+    width: 50px;
+  }
+
+  .input-container {
+    width: 50px;
+  }
+
+  .app {
+    padding: 10px;
+    grid-template-rows: 30px 1fr 10px;
+  }
 }
